@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+        Please Login
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale-1.0">
+        
+        <style type="text/css">
+            html { height: 100%; }
+            body {
+                margin: 0px;
+                padding: 0px;
+                font-family:
+                    "Helvetica Neue",
+                    "Arial",
+                    sans-serif;
+                    
+                color: gray;
+                font-size: 80%;
+                text-align: center;
+                background-color: rgb(70%,70%,75%);
+            }
+
+            #login_form { padding: 18px; }
+
+            #login_form > input[type=text],
+            #login_form > input[type=password] {
+                width: 80%;
+                max-width: 18em; 
+                display: block;
+                margin: auto;
+                margin-bottom: 8px;
+                font-size: 150%;
+                border: none;
+                color: gray;
+                border-radius: 8px;
+                text-align: center;
+            }
+
+            #login_form input[type=submit] { 
+                zoom: 1.5; 
+                color: gray;
+            }
+            #login_form.error * { font-style: italic; }
+        </style>
+    
+    </head>
+    <body>
+            <form id="login_form" {% if form.errors %}class="error"{% endif %} method="post" action=".">{% csrf_token %}
+                <input id="username_input" type="text" autocomplete="off" name="username" autofocus="autofocus" placeholder="Username"/>
+                <input id="password_input" type="password" name="password" placeholder="Password"/>
+                <input type="hidden" name="next" value="/" />
+                <input id="submit_input" type="submit" value="Click to Login"/>
+                {% if form.errors %}<br />Login incorrect. Please try again.{% endif %}
+            </form>
+    </body>
+</html>

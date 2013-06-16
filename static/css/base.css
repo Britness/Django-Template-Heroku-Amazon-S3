@@ -1,0 +1,29 @@
+/* Base CSS here */
+
+body {
+    background-color: white;
+    color: gray;
+    font-size: 110%;
+    letter-spacing: 0.2em;
+    line-height: 130%;
+    font-family: 
+        "Helvetica Neue Light", 
+        "Helvetica Neue", 
+        "Helvetica", 
+        "Arial", 
+        "Lucida Grande", 
+        sans-serif;
+    font-weight: 500;
+    text-shadow:
+        -1px 1px 4px rgba(0,0,0,0.3),
+        -1px -1px 4px rgba(0,0,0,0.3),
+        1px -1px 4px rgba(0,0,0,0.3),
+        1px 1px 4px rgba(0,0,0,0.3);
+    
+}
+
+#content {
+    max-width: 800px;
+    margin: auto;
+    width: 96%;
+}

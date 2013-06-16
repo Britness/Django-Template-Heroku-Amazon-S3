@@ -1,0 +1,9 @@
+Django==1.5.1
+wsgiref==0.1.2
+gunicorn==0.17.4
+dj-database-url==0.2.1
+psycopg2==2.5
+django-storages==1.1.8
+boto==2.9.4
+South==0.8
+django-braces==1.0.0
